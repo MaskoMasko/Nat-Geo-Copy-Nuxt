@@ -30,8 +30,12 @@ export default {
     margin: 0;
     justify-self: center;
 }
+.sign-up h1{
+    margin-top: 35px;
+}
 .sign-up h5{
     padding: 20px;
+    margin-top: 0%;
     font-weight: 500;
     font-size: 20px;
 }
@@ -86,5 +90,38 @@ export default {
 }
 .sign-up a{
     background: yellow;
+}
+@media only screen and (max-width: 1380px) {
+    .sign-up h1{
+        margin-top: 70px;
+    }
+    .yel-btn{
+        transform: translateY(-20px);
+    }
+}
+@media only screen and (max-width: 794px) {
+    .sign-up{
+        height: 400px;
+    }
+    .sign-up h1{
+        margin-top: 100px;
+    }    
+}
+@media only screen and (max-width: 524px) {
+    .sign-up h1{
+        font-size: 26px;
+    }
+    .sign-up h5{
+        margin-bottom: 5px;
+    }
+    .yel-btn{
+        transform: scale(.8);
+    }
+}
+@media only screen and (max-width: 360px) {
+
+    .sign-up h1{
+        font-size: 20px;
+    }
 }
 </style>
