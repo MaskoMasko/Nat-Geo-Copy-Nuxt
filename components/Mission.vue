@@ -96,14 +96,32 @@ export default {
     }
 }
 @media only screen and (max-width: 600px){
+    .mission-div{
+        margin-left: -10px;
+    }
+    .mission-section img{
+        width: 380px !important;
+    }
     .mission-tekst h1{
         font-size: 26px;
     }
     .mission-tekst{
-        padding-left: 50px;
+        padding-left: 10px;
     }
     .mission-tekst p{
         width: 95%;
+    }
+}
+@media only screen and (max-width: 360px){
+    .mission-tekst *{
+        padding-left: 50px;
+    }
+    button{
+        width: 90% !important;
+        margin-left:60px;
+    }
+    .mission-section{
+        width: 360px;
     }
 }
 </style>
