@@ -11,7 +11,7 @@
                 <li class="cry"><a class="nista"><NuxtLink class="renew zut" to="/renew">Renew</NuxtLink></a></li>
                 <li class="sb sbs sb2 ovadva"><span class="just"><a class="subscribe zut2" href="#">SUBSCRIBE</a></span></li>
                 <li><div class="drp" @click="$emit('toggle-dropdown')"><a href="#"><p class="cry mn">MENU</p><div class="dropdown-icon"><div class="strelica2 str"></div><div class="strelica1 str"></div></div></a></div></li>
-                <li><div class="dropdown-icon hidden1"><div class="strelica2 str"></div><div class="strelica1 str"></div></div></li>
+                <li><div class="dropdown-icon dmoe hidden1" @click="$emit('toggle-dropdown')"><div class="strelica2 str"></div><div class="strelica1 str"></div></div></li>
             </ul>
         </div>
     </nav>
@@ -70,6 +70,9 @@ export default {
     background: white;
     right: 2.7%;
     top: 0%;
+}
+.dropdown-icon:hover{
+    cursor: pointer;
 }
 .drp{
     width:100px;
@@ -189,14 +192,35 @@ export default {
 
 }
 @media only screen and (max-width: 530px){
+    .nav-lista{
+        width:110%;
+    }
     .sbs{
-        transform: translateY(-15px);
+        transform: translateY(-1px);
+        width: 200px;
     }
     .sb2{
         margin-left: 50px;
     }
     .lg{
         margin-right: 20px;
+    }
+    .dropdown-icon{
+        transform: translateX(-160px);
+    }
+}
+@media only screen and (max-width: 360px){
+    .navbar img{
+        display: none;
+    }
+    .sb{
+        z-index: 10;
+    }
+    .nav-lista li{
+        transform: translateX(70px);
+    }
+    .dmoe{
+        transform: translateX(-90px);
     }
 }
 </style>
