@@ -1,5 +1,5 @@
 <template>
-  <div class="filmovi">
+    <div class="filmovi" @mouseenter="zaFilm()">
         <h1>NAT GEO TV</h1>
         <div class="about-movie">
         <h2>GENIUS: ARETHA</h2>
@@ -10,6 +10,27 @@
             <h3>DISCOVER MORE NAT GEO TV</h3>
             <a href="" class="zut">SEE SHOWS</a>
             </div>
+            <div class="slike-filmovi">
+                <div class="slajder">
+                    <div class="cont-img"><img src="@/assets/img/toranj.jpg" alt="" class="slike-f"></div>
+                    <div class="cont-img"><img src="@/assets/img/toranj.jpg" alt="" class="slike-f"></div>
+                    <div class="cont-img"><img src="@/assets/img/toranj.jpg" alt="" class="slike-f"></div>
+                    <div class="cont-img"><img src="@/assets/img/toranj.jpg" alt="" class="slike-f"></div>
+                    <div class="cont-img"><img src="@/assets/img/toranj.jpg" alt="" class="slike-f"></div>
+                    <div class="cont-img"><img src="@/assets/img/za2.jpg" alt="" class="slike-f"></div>
+                    <div class="cont-img"><img src="@/assets/img/za2.jpg" alt="" class="slike-f"></div>
+                    <div class="cont-img"><img src="@/assets/img/za2.jpg" alt="" class="slike-f"></div>
+                    <div class="cont-img"><img src="@/assets/img/za2.jpg" alt="" class="slike-f"></div>
+                    <div class="cont-img"><img src="@/assets/img/za2.jpg" alt="" class="slike-f"></div>
+                    <div class="cont-img"><img src="@/assets/img/sure.jpg" alt="" class="slike-f"></div>
+                    <div class="cont-img"><img src="@/assets/img/sure.jpg" alt="" class="slike-f"></div>
+                    <div class="cont-img"><img src="@/assets/img/sure.jpg" alt="" class="slike-f"></div>
+                    <div class="cont-img"><img src="@/assets/img/sure.jpg" alt="" class="slike-f"></div>
+                    <div class="cont-img"><img src="@/assets/img/sure.jpg" alt="" class="slike-f"></div>
+                </div>
+            </div>
+            <div class="strelica-desno"></div>
+            <div class="strelica-livo bilo"></div>
         </div>
     </div>
 
@@ -17,11 +38,43 @@
 
 <script>
 export default {
+    methods:{
+          zaFilm(){
+              const slider = document.querySelector('.slajder');
+  const btnLeft = document.querySelector('.strelica-livo');
+  const btnRight = document.querySelector('.strelica-desno');
+  console.log(btnLeft)
+  let cur = 0;
+  btnRight.addEventListener("click", function(){
+    if(cur == 2){
+      cur--
+        btnRight.classList.add("bilo");
+      }
+    cur++;
+    console.log(cur)
+    slider.style.transform = `translateX(-${cur*33.3}%)`;
+    btnLeft.classList.remove("bilo");
+})
+btnLeft.addEventListener("click", function(){
+  if(cur == 0){
+    cur ++;
+    btnLeft.classList.add("bilo")
+  }
+  cur--;
+  console.log(cur)
 
+  slider.style.transform = `translateX(-${cur * 33.3}%)`;
+  btnRight.classList.remove("bilo")
+})
+    }
+    }
 }
 </script>
 
 <style>
+.slajder{
+    transition-duration: .5s;
+}
 .filmovi{
     height: 1012.75px;
     width: 100%;
@@ -171,5 +224,91 @@ export default {
 }
 .bilo{
     display: none;
+}
+
+@media only screen and (max-width: 1150px){
+    .showcase{
+        transform: scaleX(.8);
+    }
+    .slike-filmovi{
+        transition: .5s;
+    }
+}
+@media only screen and (max-width: 1030px){
+    .showcase{
+        transform: scale(.7);
+    }
+}
+@media only screen and (max-width: 868px){
+.about-movie{
+        width: 90%;
+    }
+    .showcase{
+        transform: scale(0.6);
+    }
+    .vrh{font-size: 28px;}
+    .vrh a{
+        transform: translateY(20px);
+    }
+}
+@media only screen and (max-width: 780px){
+    .filmovi h1{
+        font-size: 45px;
+        margin-bottom: 50px;
+    }
+    .about-movie{
+        width: 90%;
+        transform: translateX(-20px);
+    }
+    .slike-filmovi, .vrh{
+        transform: translateX(-80px);
+    }
+    .slike-filmovi{
+        margin-left: 35px;
+    }
+    .strelica-livo{
+        left: -80px;
+    }
+    .strelica-desno{
+        right: 70px;
+    }
+}
+@media only screen and (max-width: 660px){
+    .slike-filmovi, .vrh{
+        transform: translateX(-80px);
+    }
+    .slike-filmovi{
+        margin-left: 35px;
+    }
+    .strelica-livo{
+        left: -80px;
+        top:230px;
+    }
+    .strelica-desno{
+        top:230px;
+        right: 70px;
+    }
+    .showcase{
+        transform: scale(0.45);
+    }
+    .z{
+        font-size: 14px;
+    }
+    .showcase{
+        margin-left: 70px;
+    }
+    .about-movie h5{
+        margin-left: 25px;
+    }
+}
+@media only screen and (max-width: 360px){
+    .showcase{
+        transform: scale(0.34);
+        margin-left: 55px;
+    }
+    .filmovi h1{
+        font-size: 32px;
+        width: 250px;
+    }
 }
 </style>
