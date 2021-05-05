@@ -1,12 +1,12 @@
 <template>
-  <div class="latest-stories drugi">
+  <div class="latest-stories1 drugi">
         <div class="section1 yas">
         <div class="naslov">
             <h1>TRAVEL</h1>
             <div class="zuti-line"></div>
         </div>
         <div class="stories yas">
-                <div class="sve td-picks1">
+                <div class="sve sveopt td-picks1">
                 <h1>LATEST STORIES </h1>
             <ul class="td-picks1-lista">
                 <li><img src="../assets/img/mountain.jpg"> <div class="text-poli-slike"><p>TRAVEL</p><a href="#">Where to find warrior queens, fairies, and castles in Scotland</a></div></li>
@@ -56,7 +56,8 @@ export default {
 </script>
 
 <style>
-.latest-stories{
+
+.latest-stories1{
     width: 100%;
     height: 1300px;
     background: black;
@@ -312,5 +313,152 @@ export default {
     margin-bottom: 20px;
     background-color: var(--zuta-boja);
 }
-
+@media only screen and (max-width: 1020px) {
+    .latest-stories1{
+        height: 2000px;
+    }
+    .najveca-slika11{
+        grid-column: 1/6;
+        margin-left: 20px;
+        margin-right: 20px;
+        height: 550px;
+    }
+    .manja11{
+        width: 170%;
+        margin-left: 205px;
+        height: 550px;
+        transform: translateY(170px);
+    }
+    .manja21{
+        transform: translateY(170px);
+        height: 550px;
+        width: 180%;
+        margin-left: 20px;
+    }
+    .td-picks1{
+        grid-row: 3/5 !important;
+        grid-column: 1/4 !important;
+        transform: translateY(100px);
+    }
+    .td-picks1-lista{
+        display: flex;
+        flex-wrap: wrap;
+        width: 1000px;
+    }
+    .td-picks1 h1{
+        margin-left: 40px;
+    }
+}
+@media only screen and (max-width: 760px) {
+    .latest-stories1{
+        height: 2500px;
+    }
+    .najveca-slika11{
+        width: 61.5%;
+    }
+    .manja21{
+        grid-row: 1/2;
+        transform: translateY(570px)  scale(.95);
+        width: 680px ;
+        height: 500px;
+    }
+    .manja21-slika{
+        height: 70%;
+    }
+    .manja11{
+        grid-row: 2/3;
+        width: 330%;
+        height: 500px;
+        transform: translate(-930px, 400px) scale(.97);
+    }
+    .td-picks1{
+        transform: translateY(200px);
+    }
+    .td-picks1-lista li{
+        width: 350px;
+    }
+}
+@media only screen and (max-width: 700px) {
+    .manja21{
+        width: 600px ;
+    }
+    .manja11{
+        width: 590px ;
+        margin-left: 285px;
+    }
+    .najveca-slika11{
+        width: 35.5%;
+    }
+    .td-picks1-lista{
+        flex-direction: column;
+    }
+    .latest-stories1{
+        height: 3000px !important;
+    }
+}
+@media only screen and (max-width: 650px) {
+    .najveca-slika11{
+        width: 500px !important;
+    }
+    .manja21{
+        width: 500px !important;
+        margin-top: -160px;
+    }
+    .manja11{
+        width: 500px ;
+        margin-top: -230px;
+        margin-left: 380px !important;
+    }    
+    .najveca-slika11{
+        width: 29%;
+        height: 400px;
+    }
+    .td-picks1-lista li{
+        margin-top: 0%;
+    }
+    .sve{
+        transform: translateY(-130px);
+    }
+}
+@media only screen and (max-width: 501px) {
+    .manja21{
+        width: 460px !important;
+        margin-left: 10px;
+    }
+    .najveca-slika11{
+        width: 440px !important;
+    }
+    .manja11{
+        width: 460px;
+        margin-left: 420px !important;
+        margin-top: -280px;
+    }
+    .see-more1{
+        margin-left: 100px;
+    }
+}
+@media only screen and (max-width: 360px) {
+    .yas{
+        height: 100px !important;
+    }
+    .najveca-slika11{
+        width: 330px !important;
+        height: 300px;
+    }
+    .manja21{
+        width: 345px !important;
+        height: 400px;
+        margin-top: -250px;
+        margin-left: 10px;
+    }
+   .manja11{
+        width: 345px !important;
+        height: 400px;
+        margin-top: -450px;
+        margin-left: 535px !important;
+    }
+    .sveopt{
+        transform: translateY(-400px);
+    }
+}
 </style>
