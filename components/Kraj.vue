@@ -77,7 +77,7 @@ export default {
 .last-cont{
     padding-top: 40px;
     transform: translateX(-50px);
-    width: 1050px;
+    width: 90% !important;
     margin-left: auto;
     margin-right: auto;
     display: flex;
@@ -134,6 +134,22 @@ export default {
     }
     .lista2{
         padding-left: 20px;
+    }
+    .cpy{
+        font-size: 12px;
+    }
+}
+@media only screen and (max-width: 360px){
+    .kraj{
+        height: 200vh;
+        overflow: hidden;
+    }
+    .prva-lista li{
+        width: 200px;
+    }
+    .cpy p{
+        font-size: 8px;
+        width: 35%;
     }
 }
 </style>
