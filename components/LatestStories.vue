@@ -76,6 +76,9 @@ export default {
 :root{
     --zuta-boja: rgb(255, 204, 0);
 }
+.yo{
+    height: 1000px;
+}
 /*LATEST STORIES */
 .latest-stories{
     width: 100%;
@@ -312,38 +315,37 @@ export default {
 /* RESIZE */
 @media only screen and (max-width: 1020px) {
     .latest-stories{
-        width: 100%;
-        display: grid;
-        grid-template-columns: 50% 50%;
-        grid-template-rows: 1fr 1fr 1fr;
-        height: auto !important;
+        height: 2000px;
     }
     .najveca-slika{
         grid-column: 1/4;
         margin: 40px;
-        margin-left: 4%;
+        margin-left: 3.5%;
         height: 40%;
+        width: 95%;
     }
     .manja1{
-        margin-top: -20%;
-        margin-left: 6%;
+        margin-top: -19%;
         grid-column: 1/3;
-        width: 70%;
-        height: 80%;
+        grid-row: 2/4;
+        width: 72%;
+        height: 70%;
+        margin-left: 30px;
     }
     .manja2{
-        height: 80% !important;
-        margin-top: -20%;
-        transform: translate(150px);
-        width: 69% !important;
+        margin-top: -19%;
+        height: 70% !important;
+        margin-left: 150px;
+        width: 72%;
         grid-column: 2/4 !important;
+        grid-row: 2/4 !important;
     }
     .td-picks{
         grid-row: 3/5 !important;
         grid-column: 1/4 !important;
         height: 450px;
         margin-top: -200px;
-        margin-left: 50px;
+        margin-left: 100px;
     }
     .td-picks-lista{
         display: flex;
@@ -358,9 +360,118 @@ export default {
         margin-left: 300px;
     }
 }
-@media only screen and (max-width: 840px) {
+@media only screen and (max-width: 760px) {
+    .latest-stories{
+        height: 2500px;
+    }
+    .najveca-slika{
+        height: 25%;
+    }
+    .manja1{
+        transform: translateY(-310px);
+        height: 50%;
+        width: 147%;
+        margin-left: 25px;
+    }
+    .manja1-slika{
+        height: 70%;
+    }
+    .manja1-tekst{
+        margin-top: 90px;
+    }
     .manja2{
-        transform: translateX(115px);
+        height: 500px  !important;
+        transform: translateX(-200px);
+        margin-top: 120px !important;
+        width: 147%;
+        margin-left: -37px !important;
+    }
+    .manja2-slika{
+        height: 70%;
+    }
+    .manja2-tekst{
+        margin-top: 90px;
+    }
+    .td-picks{
+        margin-left: 40px;
+    }
+}
+@media only screen and (max-width: 685px) {
+    .manja2{
+        margin-top: 130px !important;
+        margin-left: 15px !important;
+        margin-right: 50px !important;
+    }
+    .manja1-tekst{
+        margin-top: 50px;
+    }
+    .manja1{
+        transform: translateY(-200px);
+    }
+    .td-picks-lista{
+        flex-direction: column;
+    }
+    .td-picks{
+        padding-top: 450px;
+    }
+    .see-more3{
+        margin-left: 150px;
+    }
+    .naslov h1{
+        font-size: 32px;
+    }
+    .naslov p, .naslov a{
+        font-size: 16px !important;
+    }
+    .naslov p{
+        margin-top: 5px !important;
+    }
+    .najveca-slika-tekst{
+        font-size: 16px;
+        width: 400px;
+    }
+
+}
+@media only screen and (max-width: 500px) {
+    .manja2{
+        margin-left:47px !important;
+        margin-top: 100px !important;
+    }
+    .manja1{
+        margin-top: -90px;
+    }
+    .najveca-slika-tekst{
+        width: 300px;
+        font-size: 12px;
+    }
+}
+@media only screen and (max-width: 360px) {
+    .manjitxt{
+        width: 75% !important;
+    }
+    .naslov h1{
+        font-size: 24px;
+    }
+    .naslov p, .naslov a{
+        font-size: 13px !important;
+    }
+    .naslov p{
+        margin-left: -7px !important;
+        margin-bottom: 30px ;
+        margin-top: 7px !important;
+    }
+    .manja1{
+        margin-left: 13px;
+        width: 340px;
+        margin-top: -130px;
+    }
+    .manja2{
+        margin-left: 75px !important;
+        width: 340px;
+        margin-top: 100px !important;
+    }
+    .td-picks{
+        padding-top: 300px;
     }
 }
 </style>
