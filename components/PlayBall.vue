@@ -130,4 +130,9 @@ export default {
         margin-left: -50px;
     }
 }
+@media only screen and (max-width: 770px){
+    .play-ball *{
+        margin-left: 10px;
+    }
+}
 </style>
